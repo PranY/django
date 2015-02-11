@@ -35,6 +35,6 @@ def index(request):
 		# Return the minified url
 		return HttpResponse( 'http://' + request.get_host() + '/' +  u.short)
 
-def redirect(request, short):
-	url = Url.objects.get(short=short)
+def redirect(request, uuid):
+	url = Url.objects.get(short=uuid)
 	return HttpResponseRedirect(url.url)

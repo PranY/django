@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<style type="text/css">
+.background {
+ 	
+ 	height: 200px;
+    width: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -110px;
+    margin-left: -120px;
+}
+</style>
+<form method="POST" action='/'>
+
+	{% csrf_token %}
+	<div class='background'>
+	<H3>Please input your URL below	</H3><br>
+	<input type='text' id='url_s' name='url'>
+	<input type='Submit'>
+	</div>
+
+</form>
+
+{% endblock %}

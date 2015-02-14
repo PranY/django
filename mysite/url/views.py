@@ -27,8 +27,7 @@ def index(request):
 		# Create a random hash for the url, ideally it
 		# should be short so that it shortens the url
 		# ideal length set 5 over base62
-		short = ''.join(random.choice('0123456789ABCDEFGHIJKLMNOPQRSTUVWX \
-			YZabcdefghijklmnopqrstuvwxvyz') for i in range(5))
+		short = ''.join(random.choice('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxvyz') for i in range(5))
 		u = Url(url=url, short=short)
 		u.save()
 
